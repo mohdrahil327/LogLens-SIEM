@@ -2,7 +2,7 @@
 **An Enterprise-Grade Log Analysis Tool for SysAdmins**
 
 LogLens is a specialized Security Information and Event Management (SIEM) tool designed to parse unstructured web server logs (Nginx/Apache) and identify malicious activity using high-performance Regex signatures.
-
+![LogLens Demo](./demo.gif)
 ## 🚀 Phase 1-4 Implementation
 - **Phase 1 (Parser):** Implemented a **Node.js Stream-based parser** to process 500MB+ logs line-by-line without high RAM usage.
 - **Phase 2 (Detection):** Signature-based engine detecting **SQLi, XSS, Path Traversal, and Shell Injection** using an external `signatures.json` database.
@@ -15,7 +15,7 @@ LogLens is a specialized Security Information and Event Management (SIEM) tool d
 - **Security:** Signature-based pattern matching (Regex)
 
 ## 📦 Installation & Setup
-1. **Clone the repo:** `git clone https://github.com/YOUR_USERNAME/LogLens-SIEM.git`
+1. **Clone the repo:** `git clone https://github.com/mohdrahil_327/LogLens-SIEM.git`
 2. **Setup Server:** `cd server && npm install && node index.js`
 3. **Setup Client:** `cd client && npm install && npm run dev`
 4. **Access UI:** Open `http://localhost:5173`
@@ -24,3 +24,6 @@ To handle large-scale web logs (500MB+), LogLens utilizes **Node.js Streams** (`
 - **The Problem:** Loading a 1GB log into memory (RAM) would crash most standard Node.js applications.
 - **The Solution:** LogLens processes data in **64KB chunks**, parsing line-by-line. 
 - **The Result:** Memory usage remains constant (~40MB) regardless of file size, ensuring enterprise-grade stability.
+
+- ## demo video
+- ![LogLens Demo](YOUR_GIF_URL_HERE)
