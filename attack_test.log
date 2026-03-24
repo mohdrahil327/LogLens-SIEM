@@ -1,0 +1,5 @@
+192.168.1.50 - - [24/Mar/2026:07:45:01] "GET /index.html HTTP/1.1" 200 532
+45.33.22.11 - - [24/Mar/2026:07:46:12] "GET /login?id=1' OR '1'='1' HTTP/1.1" 401 128
+99.88.77.66 - - [24/Mar/2026:07:47:33] "GET /admin/scripts/test.php?name=<script>alert(1)</script> HTTP/1.1" 200 45
+45.33.22.11 - - [24/Mar/2026:07:48:05] "GET /../../etc/passwd HTTP/1.1" 404 98
+192.168.1.50 - - [24/Mar/2026:07:49:55] "GET /contact.html HTTP/1.1" 200 892

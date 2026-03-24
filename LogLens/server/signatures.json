@@ -1,0 +1,22 @@
+{
+  "SQL_INJECTION": {
+    "pattern": "(UNION|SELECT|INSERT|DELETE|DROP|UPDATE|' OR '1'='1'|--|%27|%22)",
+    "severity": "CRITICAL",
+    "description": "Attempt to manipulate database queries."
+  },
+  "XSS": {
+    "pattern": "(<script>|javascript:|onerror=|onload=|<img|%3C|%3E)",
+    "severity": "HIGH",
+    "description": "Attempt to inject malicious scripts into the UI."
+  },
+  "PATH_TRAVERSAL": {
+    "pattern": "(\\.\\.\\/|\\.\\.\\\\|%2e%2e%2f|etc\\/passwd|boot\\.ini)",
+    "severity": "HIGH",
+    "description": "Attempt to access unauthorized system files."
+  },
+  "SHELL_INJECTION": {
+    "pattern": "(;|\\||`|\\$\\(|\\b(chmod|cat|sudo|nc|bash)\\b)",
+    "severity": "CRITICAL",
+    "description": "Attempt to execute OS-level commands."
+  }
+}

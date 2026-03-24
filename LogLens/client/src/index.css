@@ -1,0 +1,32 @@
+ @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  background-color: #020617;
+  font-family: 'JetBrains Mono', monospace; /* Professional Hacker Font */
+  color: #f8fafc;
+}
+
+/* Glowing Border Effect */
+.critical-card {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid #1e293b;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.1);
+  transition: all 0.3s ease;
+}
+
+.critical-card:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+.danger-glow {
+  border-color: #ef4444;
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0% { box-shadow: 0 0 5px rgba(239, 68, 68, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(239, 68, 68, 0.5); }
+  100% { box-shadow: 0 0 5px rgba(239, 68, 68, 0.2); }
+}
