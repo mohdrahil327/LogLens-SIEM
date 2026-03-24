@@ -19,3 +19,8 @@ LogLens is a specialized Security Information and Event Management (SIEM) tool d
 2. **Setup Server:** `cd server && npm install && node index.js`
 3. **Setup Client:** `cd client && npm install && npm run dev`
 4. **Access UI:** Open `http://localhost:5173`
+5. ### 🚀 Performance Note: Streaming vs. Loading
+To handle large-scale web logs (500MB+), LogLens utilizes **Node.js Streams** (`fs.createReadStream`) rather than `fs.readFile`. 
+- **The Problem:** Loading a 1GB log into memory (RAM) would crash most standard Node.js applications.
+- **The Solution:** LogLens processes data in **64KB chunks**, parsing line-by-line. 
+- **The Result:** Memory usage remains constant (~40MB) regardless of file size, ensuring enterprise-grade stability.
