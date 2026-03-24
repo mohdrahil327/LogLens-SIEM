@@ -26,4 +26,4 @@ To handle large-scale web logs (500MB+), LogLens utilizes **Node.js Streams** (`
 - **The Result:** Memory usage remains constant (~40MB) regardless of file size, ensuring enterprise-grade stability.
 
 - ## demo video
-- ![LogLens Demo](YOUR_GIF_URL_HERE)
+  
